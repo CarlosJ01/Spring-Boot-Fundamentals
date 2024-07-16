@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang=”es” xmlns:th=http://www.thymeleaf.org>
+	<head>
+		<meta charset=”utf-8”>
+		<title>Student Data</title>
+	</head>
+	<body>
+		<form th:action="@{/saveStudent}" th:object="${student}" method="POST">
+			Name: <input type="text" th:field="*{name}"/>
+			Score: <input type="text" th:field="*{score}"/>
+			<button type="submit">Submit</button>
+		</form>
+	</body>	
+</html>
